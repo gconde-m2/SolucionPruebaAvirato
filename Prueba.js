@@ -19,7 +19,7 @@ function checkWin(player, board) {
 
             if (player == board[i][k + 1] && player == board[i][k + 2] //Comprobamos de izquierda a derecha
                 && player == board[i][k])
-                last.push([i, k + 3])
+                last.push([i, k])
 
             if (player == board[i][k] && player == board[i + 1][k] //Comprobamos de arriba a abajo
                 && player == board[i + 2][k])
