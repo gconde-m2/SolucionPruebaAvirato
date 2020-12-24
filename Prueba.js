@@ -8,7 +8,7 @@ let empty = 0;
 let board = [[x][x]]; //Suponemos que el Board ya esta completo
 
 //LLamamos a la funcion de checkVicotry con las dimensiones del board como parametro y con el jugador que entre, ya sea 1 o 2
-//Despues comprobamos en las posiciones en las que el jugador esta en el board, si al final consigue un 4 en linea, gana.
+//Despues comprobamos en las posiciones en las que el jugador esta en el board, y devuelve la ultima posicion en la cual podría estar
 function checkWin(player, board) {
 
     let last = []
@@ -18,19 +18,19 @@ function checkWin(player, board) {
         for (let k = 0; k < boardHeight; k++) {
 
             if (player == board[i][k + 1] && player == board[i][k + 2] //Comprobamos de izquierda a derecha
-                && player == board[i][k + 3] && player == board[i][k])
+                && player == board[i][k])
                 last.push([i, k + 3])
 
             if (player == board[i][k] && player == board[i + 1][k] //Comprobamos de arriba a abajo
-                && player == board[i + 2][k] && player == board[i + 3][k])
+                && player == board[i + 2][k])
                 last.push([i + 3, k])
 
             if (player == board[i][k] && player == board[i + 1][k + 1]  // Laterales
-                && player == board[i + 2][k + 2] && player == board[i + 3][k + 3])
+                && player == board[i + 2][k + 2])
                 last.push([i + 3, k + 3])
 
             if (player == board[i][k] && player == board[i + 1][k - 1]
-                && player == board[i + 2][k - 2] && player == board[i + 3][k - 3])
+                && player == board[i + 2][k - 2])
                 last.push([i + 3, k - 3])
         }
     }
