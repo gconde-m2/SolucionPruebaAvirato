@@ -1,0 +1,58 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #0044AA;
+    text-align: center;
+    
+  
+  }
+
+  .separation{
+      display: flex;
+  }
+  h1 {
+    font-size: 44px;
+    color: blue;
+    text-align: center;
+    font-family:Arial;
+  }
+  
+  
+  #resetButton {
+    color:black;
+    text-align: center;
+    font-family:Arial;
+    font-size: 18px;
+    
+  }
+  #grid {
+      
+    margin-left: 400px;
+    display: table;
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+    background: blue;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin-bottom: 10px;
+     border-spacing: 5px 5px;
+  }
+  
+  .row {
+    display: table-row;
+
+  }
+  
+  
+  .cell {
+    display: table-cell;
+    background-color: #FFFFFF;
+    width: 100px;
+    height: 50px;
+    -webkit-border-radius: 80%;
+    -moz-border-radius: 50%;
+    border-radius: 80%;
+    margin: 5px;
+    padding: 80px;
+  }
+  
